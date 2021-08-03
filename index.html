@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Enpower</title>
+  <title>Empower</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -29,8 +29,27 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
+<!--Chatbot-->
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+    
 
-
+        .popup {
+            display: none;
+            position:absolute;
+            bottom:150px;
+            right:50px;
+        }
+        #bot
+        {
+            position:absolute;
+            bottom:50px;
+            right:50px;
+        }
+    </style>
 </head>
 
 <body>
@@ -139,6 +158,7 @@
 
       </div>
     </div>
+  
   </section><!-- End Hero -->
 
   <main id="main">
@@ -568,7 +588,8 @@
             <div class="contact-phone">
               <i class="bi bi-phone"></i>
               <h3>Phone Number</h3>
-              <p><a href="tel:+917489922916">+91 7489922916</a></p>
+              <p><a href="tel:+917489922916">+91 385 407 5865
+              </a></p>
             </div>
           </div>
 
@@ -576,14 +597,16 @@
             <div class="contact-email">
               <i class="bi bi-envelope"></i>
               <h3>Email</h3>
-              <p><a href="mailto:sharanytiwari@gmail.com">sharanytiwari@gmail.com</a></p>
+              <p><a href="mailto:empowerwebsite8907@gmail.com">empowerwebsite8907@gmail.com
+              </a></p>
             </div>
           </div>
 
         </div>
 
         <div class="form">
-          <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+          <!--<form action="forms/contact.php" method="post" role="form" class="php-email-form"><-->
+            <form action="https://formspree.io/f/mknkqjyg" method="POST">
             <div class="row">
               <div class="col-md-6 form-group">
                 <input type="text" name="name" class="form-control" id="name" placeholder="Your Name"
@@ -601,11 +624,11 @@
               <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
             </div>
             <div class="my-3">
-              <div class="loading">Loading</div>
+              
               <div class="error-message"></div>
-              <div class="sent-message">Your message has been sent. Thank you!</div>
             </div>
-            <div class="text-center"><button type="submit">Send Message</button></div>
+            <div class="text-center"><button type="submit" style='color:white;background-color:#5c9f24;' class="btn" 
+              >Send Message</button></div>
           </form>
         </div>
 
@@ -624,8 +647,9 @@
             <div class="footer-info">
               <h3>Sharanya Tiwari</h3>
 
-              <strong>Phone:</strong> +91 7489922916 <br>
-              <strong>Email:</strong> sharanytiwari@gmail.com<br>
+              <strong>Phone:</strong> +91 385 407 5865
+              <br>
+              <strong>Email:</strong> empowerwebsite8907@gmail.com<br>
               </p>
               <div class="social-links mt-3">
                 <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
@@ -660,9 +684,39 @@
      
     </div>
   </footer><!-- End Footer -->
+ 
+  <div class="popup">
+    <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/Kw7eRRptbOU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+    <iframe
+    allow="microphone;"
+    width="350"
+    height="430"
+    src="https://console.dialogflow.com/api-client/demo/embedded/9f46ebd2-4e41-43b9-9d6a-a195d2c86686">
+</iframe>
+</div>
+<!--<button>Click Me</button>-->
+<a class="float" onclick="test()">
+  <i class="fa fa-envelope my-float"></i>
+  </a>
+  <div class="label-container">
+  <div class="label-text">Feedback</div>
+  <i class="fa fa-play label-arrow"></i>
+  </div> 
+
+<script>
+    const button = document.querySelector('button');
+    const popup = document.querySelector('.popup');
+
+    // button.addEventListener('click', () => {
+    //     popup.style.display === 'none' ? popup.style.display = 'block' : popup.style.display = 'none';
+    // })
+
+    function test() {
+        popup.style.display === 'none' ? popup.style.display = 'block' : popup.style.display = 'none';
+    }
+</script>
+
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -674,7 +728,6 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
 </body>
 
 </html>

@@ -204,3 +204,6 @@
   });
 
 })()
+function open_chat(){
+  document.getElementById("Chatbot").style.display= inline;
+}
